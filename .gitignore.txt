@@ -1,0 +1,13 @@
+# Visual Studio / .NET ignore
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# ASP.NET
+*.cache
+*.dll
+*.exe
+*.pdb
+staticwebassets/

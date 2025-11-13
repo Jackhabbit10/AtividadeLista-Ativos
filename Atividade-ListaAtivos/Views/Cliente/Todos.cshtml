@@ -1,0 +1,32 @@
+﻿@model List<Atividade_ListaAtivos.Models.Cliente>
+
+<h2>Clientes Inativos</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Desativado em</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Model)
+        {
+            <tr>
+                <td>@cliente.Id</td>
+                <td>@cliente.Nome</td>
+                <td>@cliente.Email</td>
+                @if (@cliente.IsDeleted)
+                {
+                    <td>Inativo</td>
+                }
+                else
+                {
+                    <td>Ativo</td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>
